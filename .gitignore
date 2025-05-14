@@ -1,0 +1,13 @@
+/Data
+__pycashe__
+.vscode
+/database
+/flask_session
+write_values.py
+write_tables_vers_06.05.2025.py
+write_meters.py
+write_meters_old_version.py
+values.json
+Readme.txt
+meters.json
+app.py
