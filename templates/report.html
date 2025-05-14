@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block body%}    
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="POST">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="optobject1" name="optobject" value="valuesdud" checked>
+                        <label class="form-check-label" for="valuesdud">Дудина</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="optobject2" name="optobject" value="valuesverkh">
+                        <label class="form-check-label" for="valuesverkh">1-ый Верхний</label>
+                    </div>
+                    <div class="mb-3 row justify-content-center">
+                        <label for="monthSelect" class="form-label">Выберете месяц и год:</label>
+                        <select class="form-select col" id="monthSelect" name="month">
+                            {% for i in range(1, 13) %}
+                            <option value="{{ i }}" {% if i == selected_month %}selected{% endif %}>
+                                {{ ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", 
+                                "Август", "Сентябрь", "Октрябрь", "Ноябрь", "Декабрь"][i-1] }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                        <select class="form-select col" id="yearSelect" name="year">
+                            {% for i in range(2025, 2031) %}
+                            <option value="{{ i }}" {% if i == selected_year %}selected{% endif %}>
+                                {{ i }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Подтвердить год и месяц</button>
+                </form>              
+            </div>
+        </div>
+    </div>
+    {% if submit %}
+        <div class="container mt-3">
+            <div class="d-flex gap-2">
+                <form method="GET" action="/export_excel">
+                    <button class="btn btn-success my-3" type="submit">Сохранить отчет в Excel</button>
+                </form>
+            </div>
+            
+            <p>Отчет по потреблению ресурсов за {{ selected_month_req }} {{ selected_year_req }}</p>   
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Месяц</th>
+                    <th>Год</th>
+                    <th>Дата</th>                                        
+                    <th>Номер счетчика</th>
+                    <th>Место</th>
+                    <th>Арендатор</th>
+                    <th>Среда</th>
+                    <th>Расход</th>
+                    <th>Показания</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for row in result %}
+                    <tr>
+                        {% for item in row %}
+                        <td>{{ item }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}      
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% block body%}    
+    <div class="container row align-items-start">
+        <div class="col">Номер счетчика №</p></div>
+        <div class="col">{{ number }}</div>
+        <div>{{  place }}</div>
+    </div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="POST">
+                    <div class="mb-3 row justify-content-center">
+                        <label for="monthSelect" class="form-label">Выберете месяц и год:</label>
+                        <select class="form-select col" id="monthSelect" name="month">
+                            {% for i in range(1, 13) %}
+                            <option value="{{ i }}" {% if i == selected_month %}selected{% endif %}>
+                                {{ ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", 
+                                "Август", "Сентябрь", "Октрябрь", "Ноябрь", "Декабрь"][i-1] }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                        <select class="form-select col" id="yearSelect" name="year">
+                            {% for i in range(2025, 2031) %}
+                            <option value="{{ i }}" {% if i == selected_year %}selected{% endif %}>
+                                {{ i }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Подтвердить год и месяц</button>
+                </form>              
+                {% if selected_month %}
+                <div class="mt-3">
+                    <p>Вы выбрали месяц:<strong> {{ ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", 
+                        "Июль", "Август", "Сентябрь", "Октрябрь", "Ноябрь", "Декабрь"][selected_month-1] }}</strong>,  
+                        год:<strong>{{ selected_year }}</strong></p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="text-danger">
+            <h3>{{ notification }}</h3>
+        </div>
+        <div id='coefficient-data' data-coefficient="{{ coefficient }}"></div>          
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Месяц</th>
+                <!-- <th>Год</th> -->
+                <th>Расход</th>
+                <th>Показания</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", 
+                    "Июль", "Август", "Сентябрь", "Октрябрь", "Ноябрь", "Декабрь"][selected_month-2] }}</td>
+                <!-- <td>{{ selected_year }}</td> -->
+                <td id="previousDebit">{{ debit_prev }}</td>
+                <td id="previousValue">{{ value_prev }}</td>
+            </tr>
+            <tr>
+                <td id="mothSelected">{{ ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", 
+                    "Июль", "Август", "Сентябрь", "Октрябрь", "Ноябрь", "Декабрь"][selected_month-1] }}</td>
+                <!-- <td id="yearSelected">{{ selected_year }}</td> -->
+                <td id="currentDebit"></td>
+                <td>
+                    <form>
+                        <input name='currentValue' id="currentValue" type="number">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>Percentage Difference</td>
+                <td colspan="2" id="percentageDiff">0%</td>
+            </tr>
+            </tbody>
+        </table>
+    <button onclick="saveReading()" class="btn btn-primary">Записать показания</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentValueInput = document.getElementById('currentValue');
+            const previousValueCell = document.getElementById('previousValue');
+            const previousDebitCell = document.getElementById('previousDebit');
+            const currentDebitCell = document.getElementById('currentDebit');
+            const percentageDiffCell = document.getElementById('percentageDiff');
+            const monthSelectedCell = document.getElementById('mothSelected');
+            const coefficient = parseInt(document.getElementById('coefficient-data').dataset.coefficient);
+
+            // const yearSelectedCell = document.getElementById('yearSelected') раньше данные о годе 
+            // передавались из JS через JSON файл потом убрал чтобы облегчить таблицу
+            
+            // Get initial values from Flask template variables
+            const previousReading = parseInt(previousValueCell.textContent);
+            const previousDebit = parseInt(previousDebitCell.textContent);
+            const monthSelected = monthSelectedCell.textContent;
+            // const yearSelected = yearSelectedCell.textContent;
+            
+            // Calculate and update values when current reading changes
+            currentValueInput.addEventListener('input', function() {
+                const currentReading = parseInt(currentValueInput.value) || 0;
+                const currentDebit = (currentReading - previousReading) * coefficient;
+                
+                currentDebitCell.textContent = currentDebit.toFixed(0);
+                
+                // Calculate percentage difference
+                if (previousDebit > 0) {
+                    const percentageDiff = ((currentDebit - previousDebit) / previousDebit) * 100;
+                    percentageDiffCell.textContent = percentageDiff.toFixed(2) + '%';
+                    
+                    // Color coding for percentage difference
+                    if (percentageDiff > 10) {
+                        percentageDiffCell.style.color = 'red';
+                    } else if (percentageDiff < -10) {
+                        percentageDiffCell.style.color = 'blue';
+                    } else {
+                        percentageDiffCell.style.color = 'green';
+                    }
+                } else {
+                    percentageDiffCell.textContent = 'N/A';
+                    percentageDiffCell.style.color = 'black';
+                }
+            });
+            window.saveReading = function() {
+                const currentReading = parseFloat(currentValueInput.value);
+                if (!isNaN(currentReading)) {
+                    const currentDebit = (currentReading - previousReading)*coefficient;
+                    
+                    // In a real application, you would send this data to your Flask backend
+                    // Here we'll just show what would be sent
+                    const dataToSend = {
+                        month: monthSelected,
+                        value: currentReading,
+                        debit: currentDebit,
+                        // year: yearSelected
+                    };
+                    
+                    // console.log("Data to send to server:", dataToSend);
+                    
+                    // Example of how you might send this to Flask using fetch API
+                    
+                    fetch('/insertdud/write_value', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(dataToSend)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Success:', data);
+                        alert('Reading saved successfully on server!');
+                        window.location.href = data.redirect;
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        alert('Error saving reading: ' + error.message);
+                    });
+                    
+                    // alert('In a real app, this would send to Flask:\n' + 
+                    //       JSON.stringify(dataToSend, null, 2));
+                } else {
+                    alert('Please enter a valid current reading before saving.');
+                }
+            };
+        })
+    </script>
+{% endblock %}

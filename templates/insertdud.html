@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block body%}
+    <div class="container">
+        <h1>Поиск счетчика</h1>
+        <input type="number" id="searchInput" placeholder="Type to search...">
+        <ul id="results"></ul>
+        <div id="output"></div>
+        <form method="GET" action="/insertdud/search/check">
+            <button class="btn btn-danger my-3" type="submit">Перейти к вводу показания</button>
+        </form>    
+        <form method="GET" action="/insertdud">
+            <button class="btn btn-danger my-3" type="submit">Повторить поиск</button>
+        </form>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const resultsList = document.getElementById('results');
+        const outputDiv = document.getElementById('output');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value;
+            if (query.length > 0) {
+                fetch(`/insertdud/search?query=${query}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        resultsList.innerHTML = '';
+                        for (const key in data) {
+                            const li = document.createElement('li');
+                            li.innerHTML = `<button class="btn btn-light">${key}</button>`;
+                            li.addEventListener('click', () => {
+                                outputDiv.innerHTML = `<strong>${key}:</strong> ${data[key]}`;
+                                fetch('/save_selection', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify({
+                                        key: key,
+                                        value: data[key]
+                                    }),
+                                })
+                                .then(response => response.json())
+                                .then(result => {
+                                    console.log('Selection saved:', result);
+                                });
+                                resultsList.innerHTML = '';
+                                searchInput.value = '';
+                            });
+                            resultsList.appendChild(li);
+                        }
+                    });
+            } else {
+                resultsList.innerHTML = '';
+                outputDiv.innerHTML = '';
+            }
+        });
+    </script>
+{% endblock %}

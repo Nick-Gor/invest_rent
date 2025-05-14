@@ -1,0 +1,1052 @@
+{
+    "59064092": {
+        "place": "Рынок (Цитадель ПСК)  УМАРОВ ИП Чукчин ",
+        "coefficient": "1",
+        "tenant": "Умаров Б.Х. ИП",
+        "enviroment": "electricity"
+    },
+    "51400": {
+        "place": "Рынок Новый павильон УМАРОВ  ИП Чукчин ",
+        "coefficient": "1",
+        "tenant": "Умаров Б.Х. ИП",
+        "enviroment": "electricity"
+    },
+    "11074180073475": {
+        "place": "15 шр Гроховский ",
+        "coefficient": "1",
+        "tenant": "Гроховский В.В. Гр РФ",
+        "enviroment": "electricity"
+    },
+    "010556136501496": {
+        "place": "Рынок Гроховский автостоянка охрана  ",
+        "coefficient": "1",
+        "tenant": "Гроховский В.В. Гр РВ\n(Белецкая)",
+        "enviroment": "electricity"
+    },
+    " 61068397": {
+        "place": "Рынок Гроховский Бытовка  ",
+        "coefficient": "1",
+        "tenant": "Гроховский В.В. Гр РВ\n(Белецкая)",
+        "enviroment": "electricity"
+    },
+    "57004022": {
+        "place": "Рынок Кравцова (кафе) ",
+        "coefficient": "1",
+        "tenant": "Городнова П.В. ИП",
+        "enviroment": "electricity"
+    },
+    "011073178318934": {
+        "place": "Рынок Темуров Хожиев Тахир (кафе у ПСК) ",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "electricity"
+    },
+    "011073178320234": {
+        "place": "Рынок Командирчик (Главпиво) (новый счетчик)  ",
+        "coefficient": "1",
+        "tenant": "Командирчик Ю.В. ИП",
+        "enviroment": "electricity"
+    },
+    " 011073178317712": {
+        "place": "Рынок Зейналов (Магазин 24) (новый счечик) ",
+        "coefficient": "1",
+        "tenant": "Магомедов З.А ИП",
+        "enviroment": "electricity"
+    },
+    "57039503": {
+        "place": "Рынок Темуров Чайхана  ",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "electricity"
+    },
+    " 011073175159709": {
+        "place": "Рынок Темуров Хожиев Тахир (саморканд) 1 полов",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "electricity"
+    },
+    "11073178318979": {
+        "place": "Рынок Темуров Хожиев Тахир (саморканд) 2 полов",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "electricity"
+    },
+    "60212475": {
+        "place": "Рынок Темуров Хожиев Тахир (саморканд) тандыр",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "electricity"
+    },
+    "011124174560861": {
+        "place": "Рынок Темуров Хожиев Тахир (саморканд) склад",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "electricity"
+    },
+    "30430388": {
+        "place": "Рынок Алиев Герай Абчу Оглы ИП ",
+        "coefficient": "1",
+        "tenant": "Алиев Герай Овчу Оглы ИП\n",
+        "enviroment": "electricity"
+    },
+    "30576763": {
+        "place": "Рынок Загуменникова- цветы (павильон) ",
+        "coefficient": "1",
+        "tenant": "Загуменникова Г.А. ИП",
+        "enviroment": "electricity"
+    },
+    "00023868": {
+        "place": "кафе Сурдон у мойки Мамедов Алиев (сурдон кафе)у мойки ",
+        "coefficient": "1",
+        "tenant": "Мамедов Р.А. ИП",
+        "enviroment": "electricity"
+    },
+    "011073174088472": {
+        "place": "кафе Сурдон у мойки Кухня (присторйка) ",
+        "coefficient": "1",
+        "tenant": "Мамедов Р.А. ИП\n",
+        "enviroment": "electricity"
+    },
+    "58005608": {
+        "place": "Робот 15 шр Кравцова (Просто Мойка)         ",
+        "coefficient": "1",
+        "tenant": "Городнова П.В. ИП",
+        "enviroment": "electricity"
+    },
+    "57036711": {
+        "place": "Автогараж 15 шр Кречетова (полировка) 15шр ",
+        "coefficient": "1",
+        "tenant": "Кречетов Н.В. Гр РФ",
+        "enviroment": "electricity"
+    },
+    "57123919": {
+        "place": "15 шр Асадов Анвар (фотоконтроль) ",
+        "coefficient": "1",
+        "tenant": "Асадов Анвар Хамрокулович гр УР",
+        "enviroment": "electricity"
+    },
+    "57033695": {
+        "place": "15 шр ШинСервис ПитСтоп  ",
+        "coefficient": "1",
+        "tenant": "Шинсервис ООО",
+        "enviroment": "electricity"
+    },
+    "57007172": {
+        "place": "У автомойки Комаровский (Покрышкин) ",
+        "coefficient": "1",
+        "tenant": "Комаровский В.Ю. ИП",
+        "enviroment": "electricity"
+    },
+    "57007604": {
+        "place": "Боксы новые в центре АБК ИП Королева (авторем New) ",
+        "coefficient": "1",
+        "tenant": "Королева Л.А. ИП",
+        "enviroment": "electricity"
+    },
+    "57033709": {
+        "place": "Боксы новые в центре АБК ИП Королева (авторем New) ",
+        "coefficient": "1",
+        "tenant": "Королева Л.А. ИП",
+        "enviroment": "electricity"
+    },
+    "26026814": {
+        "place": "мойка Остапенко  (н.Мойка)  ",
+        "coefficient": "1",
+        "tenant": "Остапенко В.В. ИП",
+        "enviroment": "electricity"
+    },
+    "433682": {
+        "place": "Парихмахерская Умаров Рахматов ",
+        "coefficient": "1",
+        "tenant": "Умаров Б.Х. ИП",
+        "enviroment": "electricity"
+    },
+    "57028197": {
+        "place": "Рынок Пузанова ",
+        "coefficient": "1",
+        "tenant": "Пузанова Ю.А. ИП",
+        "enviroment": "electricity"
+    },
+    "176639": {
+        "place": "Рынок Алиев Мамедов Роял  (магазин) ",
+        "coefficient": "1",
+        "tenant": "Алиев Герай Овчу Оглы ИП\n",
+        "enviroment": "electricity"
+    },
+    "32208546": {
+        "place": "арка реклама ЛЛД - Сервис (арка) ",
+        "coefficient": "1",
+        "tenant": "ЛЛД-СЕРВИС ООО",
+        "enviroment": "electricity"
+    },
+    "096296519": {
+        "place": "Счетчик у теплоцентра  Металлстрой ГК ООО ",
+        "coefficient": "1",
+        "tenant": "ГК Металлстрой ООО",
+        "enviroment": "electricity"
+    },
+    "101526546": {
+        "place": "Магазин свободно  ",
+        "coefficient": "1",
+        "tenant": "Сафонов М.К. гр. РФ",
+        "enviroment": "electricity"
+    },
+    "002370": {
+        "place": "Кафе Денов ИП Королева (новый счетчик) ",
+        "coefficient": "1",
+        "tenant": "Королева Л.А. ИП",
+        "enviroment": "electricity"
+    },
+    "23986357": {
+        "place": "Элитная одежда ИП Шарипов 40",
+        "coefficient": "40",
+        "tenant": "Шарипов С.З. ИП",
+        "enviroment": "electricity"
+    },
+    "31154892": {
+        "place": "Ремонт велосипедов свободно (собственные нужды) ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "58008811": {
+        "place": "1 этаж Алиев Герай Овчу Оглы  (летнее кафе) ",
+        "coefficient": "1",
+        "tenant": "Алиев Герай Овчу Оглы ИП\n",
+        "enviroment": "electricity"
+    },
+    "104302352": {
+        "place": "1 этаж 1 эт. Свободно  ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "104346009": {
+        "place": "1 этаж Огни большого города Касьянова ИП (кухни) ",
+        "coefficient": "1",
+        "tenant": "Сидоренко С.В. ИП",
+        "enviroment": "electricity"
+    },
+    "104302646": {
+        "place": "1 этаж охрана \"Нева СПб\"  (будка на улице) ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "00026138": {
+        "place": "1 этаж Никулин   1 эт.  (автомагазин) ",
+        "coefficient": "1",
+        "tenant": "Никулин А.С. ИП",
+        "enviroment": "electricity"
+    },
+    "104300790": {
+        "place": "1 этаж 1 эт.  \"Санторин\" (ставки на спорт)    ",
+        "coefficient": "1",
+        "tenant": "САНТОРИН ООО",
+        "enviroment": "electricity"
+    },
+    "00011235": {
+        "place": "1 этаж ИРБИС 1 эт. \"БарсГидравлик\" ",
+        "coefficient": "1",
+        "tenant": "Ирбис ООО",
+        "enviroment": "electricity"
+    },
+    "353101": {
+        "place": "2 этаж (щит 1) п. 1 (210 а)Энергосервис  ",
+        "coefficient": "1",
+        "tenant": "ЭнергоСервис ООО",
+        "enviroment": "electricity"
+    },
+    "074537": {
+        "place": "2 этаж (щит 1) п. 2 (210 б) ЭнергоСервис ",
+        "coefficient": "1",
+        "tenant": "ЭнергоСервис ООО",
+        "enviroment": "electricity"
+    },
+    "353033": {
+        "place": "2 этаж (щит 1) Гуцул п. 3 (210 в)  ",
+        "coefficient": "1",
+        "tenant": "Гуцул Жанна   ИП",
+        "enviroment": "electricity"
+    },
+    "353063": {
+        "place": "2 этаж (щит 1) п. 4  (210 г) Управл. Компания (с.нужды) ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "electricity"
+    },
+    "505801": {
+        "place": "2 этаж (щит 2) п. 208 свободно ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "505425": {
+        "place": "2 этаж (щит 2) п. 209 \"Трестин\" ",
+        "coefficient": "1",
+        "tenant": "Трестин И.Ю. ИП",
+        "enviroment": "electricity"
+    },
+    "513846": {
+        "place": "2 этаж (щит 2) Трестин п. 212 МобилТрансАвто  ",
+        "coefficient": "1",
+        "tenant": "Трестин И.Ю. ИП",
+        "enviroment": "electricity"
+    },
+    "513870": {
+        "place": "2 этаж (щит 2) п. 213  \"Марчук\" ",
+        "coefficient": "1",
+        "tenant": "Марчук А.Н. гр. РФ",
+        "enviroment": "electricity"
+    },
+    "505893": {
+        "place": "2 этаж (щит 2) п. 214 \"Ротар\" ",
+        "coefficient": "1",
+        "tenant": "Ротар ОО ООО",
+        "enviroment": "electricity"
+    },
+    "503855": {
+        "place": "2 этаж (щит 2) п. 215 Свободно  Бизнес Процесс ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "102117694": {
+        "place": "2 этаж (щит 3) п. 216 \"Альдога\" ",
+        "coefficient": "1",
+        "tenant": "Альдога плюс ООО",
+        "enviroment": "electricity"
+    },
+    "102143518": {
+        "place": "2 этаж (щит 3) Гуцул п. 202   Бизнес Процесс ",
+        "coefficient": "1",
+        "tenant": "Гуцул Жанна   ИП",
+        "enviroment": "electricity"
+    },
+    "102117701": {
+        "place": "2 этаж (щит 3) п. 201  ИП Шуманева О.Г. ",
+        "coefficient": "1",
+        "tenant": "Шуманева О.Г. ИП",
+        "enviroment": "electricity"
+    },
+    "102117752": {
+        "place": "2 этаж (щит 3) п. 203 ООО\"Гидробилд\" ",
+        "coefficient": "1",
+        "tenant": "Гидробилд ООО",
+        "enviroment": "electricity"
+    },
+    "102117702": {
+        "place": "2 этаж (щит 3) п. 204 \"ПЦН\" ",
+        "coefficient": "1",
+        "tenant": "ПЦН ООО",
+        "enviroment": "electricity"
+    },
+    "101526730": {
+        "place": "2 этаж (щит 3) п. 205 \"Тепло\" ",
+        "coefficient": "1",
+        "tenant": "Тепло ООО",
+        "enviroment": "electricity"
+    },
+    "101526565": {
+        "place": "2 этаж (щит 3) п. 207 Кошевая  ",
+        "coefficient": "1",
+        "tenant": "Кошевая О.А. ИП",
+        "enviroment": "electricity"
+    },
+    "102143485": {
+        "place": "2 этаж (щит 3) п. 206 Иванова ",
+        "coefficient": "1",
+        "tenant": "Иванова О.В. ИП",
+        "enviroment": "electricity"
+    },
+    "101526692": {
+        "place": "3 этаж (щит 1) п. 305 (сервер)  \"Смарт Телеком\" ",
+        "coefficient": "1",
+        "tenant": "Смарт Хоум ООО",
+        "enviroment": "electricity"
+    },
+    "502819": {
+        "place": "3 этаж (щит 1) п. 302     Федорченко ",
+        "coefficient": "1",
+        "tenant": "Федорченко Т.Е. ИП",
+        "enviroment": "electricity"
+    },
+    "504476": {
+        "place": "3 этаж (щит 1) Мирошниченко п. 301    ",
+        "coefficient": "1",
+        "tenant": "Мирошниченко В.И. ИП",
+        "enviroment": "electricity"
+    },
+    "101526584": {
+        "place": "3 этаж (щит 1) п. 303   администрация ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "electricity"
+    },
+    "101525489": {
+        "place": "3 этаж (щит 1) п. 303А Бабий ",
+        "coefficient": "1",
+        "tenant": "Бабий В.П. ИП",
+        "enviroment": "electricity"
+    },
+    "101525523": {
+        "place": "3 этаж (щит 1) п. 304 Гусак Анна Яковлевна ",
+        "coefficient": "1",
+        "tenant": "Гусак А.Я. гр. РФ",
+        "enviroment": "electricity"
+    },
+    "101526659": {
+        "place": "3 этаж (щит 1) п. 305  \"ПУМ\" ",
+        "coefficient": "1",
+        "tenant": "ПУМ ООО",
+        "enviroment": "electricity"
+    },
+    "503846": {
+        "place": "3 этаж (щит 2) ЛИДЕР п. 306 \"Эскон\" ",
+        "coefficient": "1",
+        "tenant": "Лидер ООО",
+        "enviroment": "electricity"
+    },
+    "502846": {
+        "place": "3 этаж (щит 2) ЛИДЕР  \"Эскон\" сервер ",
+        "coefficient": "1",
+        "tenant": "Лидер ООО",
+        "enviroment": "electricity"
+    },
+    "502816": {
+        "place": "3 этаж (щит 2) ЛИДЕР  п. 308 \"Эскон\" ",
+        "coefficient": "1",
+        "tenant": "Лидер ООО",
+        "enviroment": "electricity"
+    },
+    "279178": {
+        "place": "3 этаж (щит 2) Коридор п. 309 \"Эскон\" ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "electricity"
+    },
+    "513852": {
+        "place": "3 этаж (щит 2) Чалова Н.А. п. 310 ",
+        "coefficient": "1",
+        "tenant": "Чалова Н.А. гр",
+        "enviroment": "electricity"
+    },
+    "101526568": {
+        "place": "3 этаж (щит 2) п. 307 (Золотарев Андрей) ",
+        "coefficient": "1",
+        "tenant": "Золотарев А.Г. ИП",
+        "enviroment": "electricity"
+    },
+    "101526491": {
+        "place": "3 этаж (щит 2)  \"Эскон\" (кондиционер) ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "328969": {
+        "place": "4 этаж (щит 1) Копейкина Е. А. п. 407 Гуцул ",
+        "coefficient": "1",
+        "tenant": "Копейкина Е.А. гр РФ",
+        "enviroment": "electricity"
+    },
+    "420602": {
+        "place": "4 этаж (щит 1) п. 402 Червякова Н. В. ",
+        "coefficient": "1",
+        "tenant": "Червякова Н.В. гр. РФ",
+        "enviroment": "electricity"
+    },
+    "420691": {
+        "place": "4 этаж (щит 1) п. 409  (управляющая компания) ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "electricity"
+    },
+    "420670": {
+        "place": "4 этаж (щит 1) п. 410 свободно  ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "420688": {
+        "place": "4 этаж (щит 1) п. 411 Анисимова ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "420705": {
+        "place": "4 этаж (щит 1) п. 412 \"Казавов\" (спортзал) ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "011695144734837": {
+        "place": "4 этаж (щит 1)  свободно п. 403 уложенко ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "488444": {
+        "place": "4 этаж (щит 1) п. 404 панина ",
+        "coefficient": "1",
+        "tenant": "Панина М.Б. гр РФ",
+        "enviroment": "electricity"
+    },
+    "61053128": {
+        "place": "4 этаж (щит 1) п. 405 \" Казавов \" ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "62045682": {
+        "place": "4 этаж (щит 1) п. 130 свободно  ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "62046645": {
+        "place": "4 этаж (щит 1) п. 130 ИП Намятов ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "62046750": {
+        "place": "4 этаж (щит 1) п. 130 свободно  ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "60120296": {
+        "place": "4 этаж (щит 1) п. 401Б Петроспецпроект ",
+        "coefficient": "1",
+        "tenant": "ПетроСпецПроект ООО",
+        "enviroment": "electricity"
+    },
+    "011067173232077": {
+        "place": "4 этаж (щит 2) Шарипов п. 408  - ",
+        "coefficient": "1",
+        "tenant": "Шарипов С.З. ИП",
+        "enviroment": "electricity"
+    },
+    "30542492": {
+        "place": "4 этаж (щит 2) п. 414 Агафонов ",
+        "coefficient": "1",
+        "tenant": "Клюев Александр ИП",
+        "enviroment": "electricity"
+    },
+    "39022711": {
+        "place": "4 этаж (щит 3) Теле -2 ",
+        "coefficient": "1",
+        "tenant": "Т2 Мобайл ООО (Теле2)",
+        "enviroment": "electricity"
+    },
+    "57031643": {
+        "place": "Лит. Б Автохелп Лунева ИП (Бутенко) ",
+        "coefficient": "1",
+        "tenant": "Лунева П.А. ИП",
+        "enviroment": "electricity"
+    },
+    "57026169": {
+        "place": "Лит. Б  ЛЛД-Сервис (380 в.) ",
+        "coefficient": "1",
+        "tenant": "ЛЛД-СЕРВИС ООО",
+        "enviroment": "electricity"
+    },
+    "21973109": {
+        "place": "Лит. Б  ЛЛД-Сервис счетчик в автохелп ",
+        "coefficient": "1",
+        "tenant": "ЛЛД-СЕРВИС ООО",
+        "enviroment": "electricity"
+    },
+    "00001167": {
+        "place": "Лит. Б   ИП Королева (шаражмонтаж) ",
+        "coefficient": "1",
+        "tenant": "Королева Л.А. ИП",
+        "enviroment": "electricity"
+    },
+    "0278925": {
+        "place": "Лит. Б  лит. Б  1-ый бокс \"Эскон\" ",
+        "coefficient": "1",
+        "tenant": "Эскон ООО",
+        "enviroment": "electricity"
+    },
+    "096296477": {
+        "place": "Лит. Б  лит. Б  2-ый бокс \"Эскон\" ",
+        "coefficient": "1",
+        "tenant": "Эскон ООО",
+        "enviroment": "electricity"
+    },
+    "102117636": {
+        "place": "ФЛАГМАН лит. Б  3-ий бокс ",
+        "coefficient": "1",
+        "tenant": "Флагман ООО",
+        "enviroment": "electricity"
+    },
+    "318354-D": {
+        "place": "Дальний счетчик лит. Б  утро ",
+        "coefficient": "1",
+        "tenant": "None",
+        "enviroment": "electricity"
+    },
+    "318354-N": {
+        "place": "Дальний счетчик лит. Б  вечер ",
+        "coefficient": "1",
+        "tenant": "None",
+        "enviroment": "electricity"
+    },
+    "00042260": {
+        "place": "Лит. Б  напротив Лит. В Лит.Б бокс МБС (автобусы) ",
+        "coefficient": "1",
+        "tenant": "МБС ООО",
+        "enviroment": "electricity"
+    },
+    "081794": {
+        "place": "Лит. Б  напротив Лит. В Лит. Б бокс Жураев  ",
+        "coefficient": "1",
+        "tenant": "Жураев О.Х. гр РФ",
+        "enviroment": "electricity"
+    },
+    "079620": {
+        "place": "Лит. Б БлекБэт ИП \"Мосоян\"  с 18.05.20 ",
+        "coefficient": "1",
+        "tenant": "Мосоян А.Э. ИП",
+        "enviroment": "electricity"
+    },
+    "60115072": {
+        "place": "Лит. Б БлекБэт ИП \"Мосоян\"  с 18.05.20 ",
+        "coefficient": "1",
+        "tenant": "Мосоян А.Э. ИП",
+        "enviroment": "electricity"
+    },
+    "011074189298989": {
+        "place": "Автобокс в углу Лит. Б Скловский ",
+        "coefficient": "1",
+        "tenant": "Скловский А.А. гр РФ",
+        "enviroment": "electricity"
+    },
+    "00001868": {
+        "place": "Лит. Б Японские авто АлДизайн  ",
+        "coefficient": "1",
+        "tenant": "Алдизайн ООО",
+        "enviroment": "electricity"
+    },
+    "102117743": {
+        "place": "Лит. Б ИП Юрков Ю.Н. ",
+        "coefficient": "1",
+        "tenant": "Юрков Ю.Н. ИП",
+        "enviroment": "electricity"
+    },
+    "082212": {
+        "place": "Лит. Б \"Стройбыт\" лит. \"Б\"  ",
+        "coefficient": "1",
+        "tenant": "СТРОЙБЫТ ООО",
+        "enviroment": "electricity"
+    },
+    "259693": {
+        "place": "Лит. Б Антисервис ",
+        "coefficient": "1",
+        "tenant": "АнтиСервис ООО",
+        "enviroment": "electricity"
+    },
+    "025648": {
+        "place": "Лит. Б Бронза ",
+        "coefficient": "1",
+        "tenant": "Бронза ООО",
+        "enviroment": "electricity"
+    },
+    "011074189201337": {
+        "place": "Лит.В Угурлуев  Явкин (новое помещение) ",
+        "coefficient": "1",
+        "tenant": "Угурлуев Р.А. Оглы ИП ",
+        "enviroment": "electricity"
+    },
+    "00026987": {
+        "place": "Лит \"В\" Угурлуев Явкин ",
+        "coefficient": "1",
+        "tenant": "Угурлуев Р.А. Оглы ИП ",
+        "enviroment": "electricity"
+    },
+    "081799": {
+        "place": "Лит \"В\" Смирнов Иван (ТЦ) с 15.05.24 ",
+        "coefficient": "1",
+        "tenant": "Смирнов И.И. гр РФ",
+        "enviroment": "electricity"
+    },
+    "57005898": {
+        "place": "Лит \"В\" ИП Галацевич В.А.  ",
+        "coefficient": "1",
+        "tenant": "Галацевич В.А гр. РФ",
+        "enviroment": "electricity"
+    },
+    "00006399": {
+        "place": "Стекла лит.\"В\" АВТОТРАСГРУПП (стекла) ",
+        "coefficient": "1",
+        "tenant": "АвтоТрастГрупп ООО ",
+        "enviroment": "electricity"
+    },
+    "075777": {
+        "place": "Парники - офис Макин \"Шиловский\"  (парники) ",
+        "coefficient": "1",
+        "tenant": "Макин В.Г. ИП",
+        "enviroment": "electricity"
+    },
+    "57035662": {
+        "place": "Зеленый ангар  ",
+        "coefficient": "1",
+        "tenant": "Макин В.Г. ИП",
+        "enviroment": "electricity"
+    },
+    "011074180072841": {
+        "place": "Новый бокс Кулагин Андрей ",
+        "coefficient": "1",
+        "tenant": "Кулагин А.А. Гр.РФ ",
+        "enviroment": "electricity"
+    },
+    "011075195114371": {
+        "place": "Около зеленого ангара Темуров Хожиев  Тохир (пекарня) ",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "electricity"
+    },
+    "78736": {
+        "place": "Около зеленого ангара Темуров Хожиев  Тохир (хостел) ",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "electricity"
+    },
+    " 910704": {
+        "place": "зу (такси) ООО Лидер ",
+        "coefficient": "1",
+        "tenant": "Лидер ООО",
+        "enviroment": "electricity"
+    },
+    " 45581390": {
+        "place": "Контейнеры свободно - ООО \"Профкон\" ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "electricity"
+    },
+    "13165199594213": {
+        "place": "Силомер Логинов ",
+        "coefficient": "1",
+        "tenant": "Логинов С.В. ИП\n(силомер)",
+        "enviroment": "electricity"
+    },
+    "57038759": {
+        "place": "Котел 24 кВт лит. В Литера \"В\" ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "electricity"
+    },
+    "011073181158685": {
+        "place": "Новый бокс замены масла Непрозванная ",
+        "coefficient": "1",
+        "tenant": "Непрозванова Д.М. ИП",
+        "enviroment": "electricity"
+    },
+    "107422821": {
+        "place": "Котел 35 кВт лит. В  ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "electricity"
+    },
+    "023232053338": {
+        "place": "Активная  энергия Точка учета №1 40",
+        "coefficient": "40",
+        "tenant": "Собственные нужды",
+        "enviroment": "electricity"
+    },
+    "023232054335": {
+        "place": "Активная  энергия Точка учета №2 40",
+        "coefficient": "40",
+        "tenant": "Собственные нужды",
+        "enviroment": "electricity"
+    },
+    "12519812": {
+        "place": "Ввод №1 (открыт) ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "water"
+    },
+    "11550601": {
+        "place": "Пожарный №1 ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "water"
+    },
+    "8ZR10070257247": {
+        "place": "Ввод №2 (закрыт) ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "water"
+    },
+    "11550622": {
+        "place": "Пожарный №2 ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "water"
+    },
+    "б/н": {
+        "place": "Контрольный  ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "water"
+    },
+    "354139204": {
+        "place": "Туалеты лит. А ",
+        "coefficient": "1",
+        "tenant": "Собственные нужды",
+        "enviroment": "water"
+    },
+    "118490/1": {
+        "place": "СА 80094615",
+        "coefficient": "1",
+        "tenant": "Субабоненты",
+        "enviroment": "water"
+    },
+    "732305": {
+        "place": "Автотрансгрупп (автостекла)",
+        "coefficient": "1",
+        "tenant": "АвтоТрастГрупп ООО ",
+        "enviroment": "water"
+    },
+    "20131943184": {
+        "place": "ИП Смирнов ",
+        "coefficient": "1",
+        "tenant": "Смирнов И.И. гр РФ",
+        "enviroment": "water"
+    },
+    "3646482": {
+        "place": "УГУРЛУЕВ Автосервис ИП Явкин",
+        "coefficient": "1",
+        "tenant": "Угурлуев Р.А. Оглы ИП ",
+        "enviroment": "water"
+    },
+    "3527412": {
+        "place": "УГУРЛУЕВ Автосервис ИП Явкин",
+        "coefficient": "1",
+        "tenant": "Угурлуев Р.А. Оглы ИП ",
+        "enviroment": "water"
+    },
+    "230089767": {
+        "place": "УГУРЛУЕВ  Явкин (новый счетчик)",
+        "coefficient": "1",
+        "tenant": "Угурлуев Р.А. Оглы ИП ",
+        "enviroment": "water"
+    },
+    "363949718": {
+        "place": "МБС (автобусы)",
+        "coefficient": "1",
+        "tenant": "МБС ООО",
+        "enviroment": "water"
+    },
+    "365734618": {
+        "place": "Жураев ",
+        "coefficient": "1",
+        "tenant": "Жураев О.Х. гр РФ",
+        "enviroment": "water"
+    },
+    "97713100": {
+        "place": "Мосоян БлэкБэт",
+        "coefficient": "1",
+        "tenant": "Мосоян А.Э. ИП",
+        "enviroment": "water"
+    },
+    "18172176": {
+        "place": "АнтиСервис ",
+        "coefficient": "1",
+        "tenant": "АнтиСервис ООО",
+        "enviroment": "water"
+    },
+    "363940318": {
+        "place": "Стройбыт (с права от антисерв) ",
+        "coefficient": "1",
+        "tenant": "СТРОЙБЫТ ООО",
+        "enviroment": "water"
+    },
+    "76069": {
+        "place": "Бронза ",
+        "coefficient": "1",
+        "tenant": "Бронза ООО",
+        "enviroment": "water"
+    },
+    "171058226": {
+        "place": "Алиев Герай Хожиев Масиева Водомер",
+        "coefficient": "1",
+        "tenant": "Алиев Герай Овчу Оглы ИП\n",
+        "enviroment": "water"
+    },
+    "161016312": {
+        "place": "Остапенко Водомер",
+        "coefficient": "1",
+        "tenant": "Остапенко В.В. ИП",
+        "enviroment": "water"
+    },
+    "75506708": {
+        "place": "Никулин автомагаз",
+        "coefficient": "1",
+        "tenant": "Никулин А.С. ИП",
+        "enviroment": "water"
+    },
+    "5087530": {
+        "place": "ИП Королева (кафе) Денов",
+        "coefficient": "1",
+        "tenant": "Королева Л.А. ИП",
+        "enviroment": "water"
+    },
+    "298301331": {
+        "place": "ИП Королева (автосервис) (шараш монт)",
+        "coefficient": "1",
+        "tenant": "Королева Л.А. ИП",
+        "enviroment": "water"
+    },
+    "210485119": {
+        "place": "ИП Королева (бокс) ",
+        "coefficient": "1",
+        "tenant": "Королева Л.А. ИП",
+        "enviroment": "water"
+    },
+    "21206012608": {
+        "place": "ШинСервис ПитСтоп  ",
+        "coefficient": "1",
+        "tenant": "Шинсервис ООО",
+        "enviroment": "water"
+    },
+    "363974718": {
+        "place": "Бабаев свободно Теплов.узел.",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "water"
+    },
+    "363941718": {
+        "place": "Эскон ",
+        "coefficient": "1",
+        "tenant": "Эскон ООО",
+        "enviroment": "water"
+    },
+    "1177245": {
+        "place": "ИП Пузанова (Гафаров) бургеры",
+        "coefficient": "1",
+        "tenant": "Пузанова Ю.А. ИП",
+        "enviroment": "water"
+    },
+    "230392490": {
+        "place": "Мамедов Алиева Кафе у мойки",
+        "coefficient": "1",
+        "tenant": "Мамедов Р.А. ИП\n",
+        "enviroment": "water"
+    },
+    "170037297": {
+        "place": "Загуменникова- цветы (павильон)   Цветы",
+        "coefficient": "1",
+        "tenant": "Загуменникова Г.А. ИП",
+        "enviroment": "water"
+    },
+    "220309928": {
+        "place": "Темуров Хожиев Тахир у ПСК",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "water"
+    },
+    "24196402": {
+        "place": "Темуров Хожиев Тахир Вост.кафе",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "water"
+    },
+    "70405155": {
+        "place": "Темуров  Еврокебаб",
+        "coefficient": "1",
+        "tenant": "Темуров И.Д. ИП",
+        "enviroment": "water"
+    },
+    "24476707": {
+        "place": "(Цитадель ПСК) ИП Чукчин Умаров",
+        "coefficient": "1",
+        "tenant": "Умаров Б.Х. ИП",
+        "enviroment": "water"
+    },
+    "11279787": {
+        "place": "Кравцова Мойка",
+        "coefficient": "1",
+        "tenant": "Городнова П.В. ИП",
+        "enviroment": "water"
+    },
+    "326776911": {
+        "place": "Шарипов  ",
+        "coefficient": "1",
+        "tenant": "Шарипов С.З. ИП",
+        "enviroment": "water"
+    },
+    "595857": {
+        "place": "Лунева ИП (Бутенко) Автохелп",
+        "coefficient": "1",
+        "tenant": "Лунева П.А. ИП",
+        "enviroment": "water"
+    },
+    "482735022": {
+        "place": "ИП Кречитова 15 ШР",
+        "coefficient": "1",
+        "tenant": "Кречетов Н.В. Гр РФ",
+        "enviroment": "water"
+    },
+    "997143418": {
+        "place": "ИП Кречитова 15 ШР",
+        "coefficient": "1",
+        "tenant": "Кречетов Н.В. Гр РФ",
+        "enviroment": "water"
+    },
+    "С156736810": {
+        "place": "ЛЛД-Сервис  ",
+        "coefficient": "1",
+        "tenant": "ЛЛД-СЕРВИС ООО",
+        "enviroment": "water"
+    },
+    "220398373": {
+        "place": "ИРБИС Барс Гидравлик ",
+        "coefficient": "1",
+        "tenant": "Ирбис ООО",
+        "enviroment": "water"
+    },
+    "220445126": {
+        "place": "Казазов (спортзал) ",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "water"
+    },
+    "220460445": {
+        "place": "АКБ Тубор ( Авто ЗН",
+        "coefficient": "1",
+        "tenant": "Сафонов М.К. гр. РФ",
+        "enviroment": "water"
+    },
+    "22043918": {
+        "place": "Огни большого города Касьянова (кухни) ",
+        "coefficient": "1",
+        "tenant": "Сидоренко С.В. ИП",
+        "enviroment": "water"
+    },
+    "59586": {
+        "place": "Санторин Ставки на спорт",
+        "coefficient": "1",
+        "tenant": "САНТОРИН ООО",
+        "enviroment": "water"
+    },
+    "905417": {
+        "place": "Велосипеды (Яковлев) Собственые нужды",
+        "coefficient": "1",
+        "tenant": "свободно",
+        "enviroment": "water"
+    },
+    "б/н_": {
+        "place": "Юрков Склад лит.Б",
+        "coefficient": "1",
+        "tenant": "Юрков Ю.Н. ИП",
+        "enviroment": "water"
+    },
+    "491784922": {
+        "place": "Скловский ( лит. Б) ",
+        "coefficient": "1",
+        "tenant": "Скловский А.А. гр РФ",
+        "enviroment": "water"
+    }
+}
