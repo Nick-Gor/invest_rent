@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body%}
+    <div class="container">
+        <form action="/written_card" method="POST">
+            <div class="mb-3 mt-3">
+            <label for="number" class="form-label">Номер счетчика:</label>
+            <input type="text" id="number" name="number" value= "{{ number }}">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="coefficient" class="form-label">Коэффициент:</label>
+                <input type="number" id="coefficient" name="coefficient" value= "{{ coefficient }}">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="place" class="form-label">Место установки:</label>
+                <input type="text" id="place" name="place" value= "{{ place }}">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="year" class="form-label">Арендатор:</label>
+                <input type="text" id="tenant" name="tenant" value= "{{ tenant }}">
+            </div>
+            <div class="mb-3">
+            <label for="enviroment" class="form-label">Среда установки:</label>
+            <input type="text" id="enviroment" name="enviroment" value= "{{ enviroment }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Записать обновленные даныые</button>
+        </form>
+    </div>
+{% endblock %}

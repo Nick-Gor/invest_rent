@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block body%}
+    <div class="container">
+        <form action='/select_month_year' method="POST">
+            <div class="mb-3 row justify-content-center">
+                <label for="monthSelect" class="form-label">Выберете месяц и год:</label>
+                <select class="form-select col" id="monthSelect" name="month">
+                    {% for i in range(1, 13) %}
+                    <option value="{{ i }}" {% if i == selected_month %}selected{% endif %}>
+                        {{ ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", 
+                        "Август", "Сентябрь", "Октрябрь", "Ноябрь", "Декабрь"][i-1] }}
+                    </option>
+                    {% endfor %}
+                </select>
+                <select class="form-select col" id="yearSelect" name="year">
+                    {% for i in range(2025, 2031) %}
+                    <option value="{{ i }}" {% if i == selected_year %}selected{% endif %}>
+                        {{ i }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Подтвердить год и месяц</button>
+        </form>
+        {% if submit %}
+            <form action="/written_card" method="POST">
+                <div class="mb-3 mt-3">
+                    <p>Показания счетчика №{{ number }} за {{ selected_month_req }} {{ selected_year_req }} года</p>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="year" class="form-label">Расход:</label>
+                    <input type="number" id="debit" name="debit" value= "{{ debit }}">
+                </div>
+                <div class="mb-3">
+                <label for="value" class="form-label">Показания:</label>
+                <input type="number" id="value" name="value" value= "{{ value }}">
+                </div>
+                <button type="submit" class="btn btn-primary">Записать обновленные даныые</button>
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

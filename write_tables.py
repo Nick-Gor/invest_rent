@@ -21,6 +21,9 @@ app.config['dbconfig'] = {'host': '127.0.0.1',
 
 selected_month = date.today().month
 selected_year = date.today().year
+date_ = date.today()
+month_names = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+            "Июль", "Август", "Сентябрь", "Октрябрь", "Ноябрь", "Декабрь"]
 
 def read_db(
     table_name: str,
@@ -74,6 +77,59 @@ def read_db(
             cursor.fetchall()  # Clear buffer
 
         return results
+
+# функция исправления данных в таблицах
+
+def update_db(
+    table_name: str,
+    data: dict,
+    condition: str,
+    condition_params: tuple,
+    fetch_all: bool = False
+) -> str:
+    """
+    Universal function to udate data from MySQL database
+
+    Args:
+        table_name: Name of the table to query
+        data: dictionary of data to write in the table
+        condition: WHERE clause conditions (without 'WHERE')
+        condition_params: Parameters for the condition (prevents SQL injection)
+        fetch_all: True to fetch all rows, False for single row
+
+    Returns:
+        Message
+    """
+    with UseDatabase(app.config['dbconfig']) as cursor:
+        # Validate table name
+        if not table_name.replace('_', '').isalnum():
+            raise ValueError("Invalid table name")
+
+        # Build query
+
+        data_str = ' '.join(k+"="+"'"+v+"'," for k,v in data.items())[0:-1]
+        query = f"UPDATE `{table_name}` SET {data_str}"
+
+        if condition:
+            query += f" WHERE {condition}"
+
+        # Execute query (with or without params)
+        if condition and condition_params:
+            cursor.execute(query, condition_params)
+        else:
+            raise ValueError("Не заданы условия для выбора ячейки")
+
+        # Fetch results (and ensure all are consumed)
+        if fetch_all:
+            results = cursor.fetchall()
+        else:
+            results = cursor.fetchone()
+
+        # Explicitly consume any remaining unread results
+        if cursor.with_rows:
+            cursor.fetchall()  # Clear buffer
+        message = "Данные успешно записаны"
+        return message
 
 def get_last_num(table_name:str):
     with UseDatabase(app.config['dbconfig']) as cursor:
@@ -177,6 +233,7 @@ def check_dud():
 
 @app.route('/insertdud/write_value', methods=["POST"])
 def write_value():
+    global date_
     num = get_last_num('valuesdud')+1
     number = session.get('number')
     value_for_writing = request.json
@@ -201,8 +258,6 @@ def write_value():
         enviroment = cursor.fetchone()[0]
 
     # enviroment = 'water'
-
-    date_  = date.today()
     with UseDatabase(app.config['dbconfig']) as cursor:
         _SQL = """insert into valuesdud(num, number, enviroment, month, year, date, debit, value)
         values (%s, %s, %s, %s, %s, %s, %s, %s)"""
@@ -288,6 +343,7 @@ def check_verkh():
 
 @app.route('/insertverkh/write_value', methods=["POST"])
 def write_value_verkh():
+    global date_
     num = get_last_num('valuesverkh')+1
     number = session.get('number')
     value_for_writing = request.json
@@ -300,7 +356,6 @@ def write_value_verkh():
     with UseDatabase(app.config['dbconfig']) as cursor:
         cursor.execute(_SQL)
         enviroment = cursor.fetchone()[0]
-    date_  = date.today()
     with UseDatabase(app.config['dbconfig']) as cursor:
         _SQL = """insert into valuesverkh(num, number_v, enviroment, month, year, date, debit, value)
         values (%s, %s, %s, %s, %s, %s, %s, %s)"""
@@ -312,9 +367,7 @@ def write_value_verkh():
 
 @app.route('/remain', methods=["GET", "POST"])
 def remaindud():
-    global selected_month, selected_year
-    month_names = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-                "Июль", "Август", "Сентябрь", "Октрябрь", "Ноябрь", "Декабрь"]
+    global selected_month, selected_year, month_names
     if request.method == 'POST':
         table_name = request.form.get('optobject')
         submit = True
@@ -458,7 +511,150 @@ def export_excel():
         mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     )
 
+@app.route('/process', methods=['POST', 'GET'])
+def process():
+    dropdown_source = request.form.get('dropdown_source')
+    table_name = request.form.get('dropdown_value')
+    contents = []
+    if table_name=='metersdud':
+        columns=['number', 'place', 'tenant']
+    else:
+        columns=['number_v', 'place', 'tenant']
+    contents = read_db(table_name,
+                       columns,
+                       fetch_all=True)
+    data_numbers=dict()
+    for item in contents:
+        data_numbers[item[0]] = "".join(item[1:])
+    session['data_dud'] = data_numbers
+    session['table_name'] = table_name
+    session['dropdown_source'] = dropdown_source
+    return render_template('search_number_update.html', dropdown_source=dropdown_source, 
+                           table_name=table_name)
 
+
+@app.route('/fill_card', methods = ['POST', 'GET'])
+def fill():
+    global selected_month, selected_year, month_names
+    update_type = request.form.get('table')
+    number = session.get('number')
+    table_name = session.get('table_name')
+    session['update_type'] = update_type
+    if update_type=='meters':
+        if table_name == 'metersdud':
+            condition = "number=%s"
+        else:
+            condition = "number_v=%s"
+        
+        row = read_db(table_name=table_name,
+                      condition=condition,
+                      condition_params=(number,),
+                      fetch_all=False)
+        num = row[0]
+        coefficient = row[2]
+        place = row[3]
+        tenant = row[4]
+        enviroment = row[5]
+        session['num'] = num
+        return render_template('meters_card_fill.html', number=number,
+                               coefficient=coefficient, place=place, tenant=tenant, 
+                               enviroment=enviroment)
+
+    return render_template('values_card_fill.html', selected_month=selected_month, selected_year=selected_year)
+
+
+@app.route('/select_month_year', methods=['POST'])
+def select_month_year():
+    global selected_month, selected_year, month_names
+    number = session.get('number')
+    table_name = session.get('table_name')
+    
+    selected_month_req = month_names[int(request.form.get('month'))-1]
+    selected_year_req = request.form.get('year')
+    
+    columns_t = ['num', 'debit', 'value']
+    if table_name == 'metersdud':
+        table_name_t = 'valuesdud'
+        condition = "number=%s AND month = %s AND year = %s"
+    else:
+        table_name_t = 'valuesverkh'
+        condition = "number_v=%s AND month = %s AND year = %s"
+
+    readings = read_db(
+        table_name=table_name_t,
+        columns=columns_t,
+        condition=condition,
+        condition_params=(number, selected_month_req, selected_year_req),
+        fetch_all=False
+    )
+    if readings:
+        num = readings[0]
+        debit = readings[1]
+        value = readings[2]  
+        session['num'] = num
+        session['selected_month']=selected_month_req
+        session['selected_year']=selected_year_req
+        return render_template('values_card_fill.html', 
+                             number=number, 
+                             selected_month_req=selected_month_req,
+                             selected_year_req=selected_year_req, 
+                             debit=debit, 
+                             value=value, 
+                             submit=True)
+    
+    # If no readings found, show empty form
+    return render_template('values_card_fill.html',
+                         number=number,
+                         selected_month_req=selected_month_req,
+                         selected_year_req=selected_year_req,
+                         submit=True)
+
+@app.route('/written_card',  methods=['POST', 'GET'])
+def write_card():
+    update_type= session.get('update_type')
+    num = session.get('num')
+    table_name = session.get('table_name')
+    number = session.get('number')
+
+    if update_type == 'meters':
+        number = str(request.form.get('number'))
+        coefficient = str(request.form.get('coefficient'))
+        place = request.form.get('place')
+        tenant = request.form.get('tenant')
+        enviroment = request.form.get('enviroment')
+        if table_name == 'metersdud':
+            data = {'number': number, 'coefficient': coefficient, 'place': place, 'tenant': tenant, 'enviroment': enviroment}
+        else:
+            data = {'number_v': number, 'coefficient': coefficient, 'place': place, 'tenant': tenant, 'enviroment': enviroment}
+        message = update_db(
+            table_name=table_name,
+            data = data,
+            condition='num=%s',
+            condition_params=(num,),
+            fetch_all=False
+        )
+        return render_template('written_card.html', update_type=update_type, num=num, number=number, coefficient=coefficient,
+                           place=place, tenant=tenant, enviroment=enviroment, message=message)
+    else:
+        selected_year = session.get('selected_year')
+        selected_month = session.get('selected_month')
+        debit = request.form.get('debit')
+        value = request.form.get('value')
+        data = {'debit': debit, 'value': value}
+        if table_name == 'metersdud':
+            table_name_t='valuesdud'
+        else:
+            table_name_t = 'valuesverkh'
+        message = update_db(
+            table_name=table_name_t,
+            data=data,
+            condition='num=%s',
+            condition_params=(num, ),
+            fetch_all=False
+        )
+        return render_template('written_card.html', update_type=update_type, num=num,
+                               number=number, debit=debit, value=value, selected_month=selected_month,
+                               selected_year=selected_year, message=message)
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container mt-3">
+        {% if update_type == 'meters' %}
+            <table class="table">
+                <thead>
+                    <th>Запись №</th>
+                    <th>Номер счетчка</th>   
+                    <th>Коэффициент</th>
+                    <th>Место установки</th>
+                    <th>Арендатор</th>
+                    <th>Среда установки</th>
+                </thead>
+                <tbody>
+                    <td>{{ num }}</td>
+                    <td>{{ number }}</td>   
+                    <td>{{ coefficient }}</td>
+                    <td>{{ place }}</td>
+                    <td>{{ tenant }}</td>
+                    <td>{{ enviroment }}</td>
+                </tbody>
+            </table>
+        {% else %}
+            <table class="table">
+                <thead>
+                    <th>Запись №</th>
+                    <th>Номер счетчка</th>   
+                    <th>Месяц</th>
+                    <th>Год</th>
+                    <th>Расход</th>
+                    <th>Показания</th>
+                </thead>
+                <tbody>
+                    <td>{{ num }}</td>
+                    <td>{{ number }}</td>   
+                    <td>{{ selected_month }}</td>
+                    <td>{{ selected_year }}</td>
+                    <td>{{ debit }}</td>
+                    <td>{{ value }}</td>
+                </tbody>
+            </table>
+        {% endif %}    
+        <p><strong>{{ message }}</strong></p>   
+    </div>
+{% endblock %}
