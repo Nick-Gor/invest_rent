@@ -177,14 +177,10 @@ def save_selection():
 
 @app.route('/insertdud/search/check', methods=["GET", "POST"])
 def check_dud():
-    global selected_year, selected_month
+    global selected_year, selected_month, month_names
     number = session.get('number')
     place = session.get('place')
-    month_names = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-                  "Июль", "Август", "Сентябрь", "Октрябрь", "Ноябрь", "Декабрь"]
     date_  = date.today()
-    # selected_month = date.today().month
-    # selected_year = date.today().year
     notification = ''
     contents = dict()
     if request.method == 'POST':
@@ -414,9 +410,7 @@ def remaindud():
 
 @app.route('/report', methods=["GET", "POST"])
 def report():
-    global selected_year, selected_month
-    month_names = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-            "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+    global selected_year, selected_month, month_names
     if request.method == 'POST':
         table_name = request.form.get('optobject')
         submit = True
