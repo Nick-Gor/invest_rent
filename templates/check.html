@@ -79,6 +79,9 @@
             </tbody>
         </table>
     <button onclick="saveReading()" class="btn btn-primary">Записать показания</button>
+    <button class="btn btn-primary" id="locationButton">Передать координаты счетчика</button>
+    <p id="status"></p>
+    </div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -166,6 +169,44 @@
                     alert('Please enter a valid current reading before saving.');
                 }
             };
-        })
+        });
+        const locationButton = document.getElementById('locationButton');
+        const statusText = document.getElementById('status');
+
+        locationButton.addEventListener('click', () => {
+            if (!navigator.geolocation) {
+                statusText.textContent = "Geolocation is not supported by your browser.";
+                return;
+            }
+
+            // Request location
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+
+                    // Send location to Flask backend
+                    fetch('/log-location', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ latitude, longitude }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        statusText.textContent = "Location logged successfully!";
+                    })
+                    .catch(error => {
+                        statusText.textContent = "Failed to log location.";
+                        console.error(error);
+                    });
+                },
+                (error) => {
+                    statusText.textContent = "Unable to retrieve your location.";
+                    console.error(error);
+                }
+            );
+        });
     </script>
 {% endblock %}

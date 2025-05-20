@@ -157,6 +157,7 @@ def insertdud():
     for item in contents:
         data_dud[item[0]] = "".join(item[1:])
     session['data_dud'] = data_dud
+    session['table_name_pr'] = 'metersdud'
     return render_template('insertdud.html')
 
 @app.route('/insertdud/search')
@@ -272,6 +273,7 @@ def insertverkh():
     for item in contents:
         data_verkh[item[0]] = "".join(item[1:])
     session['data_verkh'] = data_verkh
+    session['table_name_pr'] = 'metersverkh'
     return render_template('insertverkh.html')
 
 @app.route('/insertverkh/search')
@@ -649,6 +651,36 @@ def write_card():
         return render_template('written_card.html', update_type=update_type, num=num,
                                number=number, debit=debit, value=value, selected_month=selected_month,
                                selected_year=selected_year, message=message)
+
+@app.route('/log-location', methods=['POST', 'GET'])
+def log_location():
+    number = session.get('number')
+    table_name = session.get('table_name_pr')
+    # Get location data from the request
+    location_data = request.json
+    latitude = location_data.get('latitude')
+    longitude = location_data.get('longitude')
+    coordinates = f"{latitude}, {longitude}"
+    if table_name=='metersdud':
+        condition = 'number=%s'
+    else:
+        condition = 'number_v=%s'
+
+    message = update_db(
+        table_name=table_name,
+        data={'coordinates': coordinates},
+        condition=condition,
+        condition_params=(number, ),
+        fetch_all=False
+    )
+    # Log the location
+    # logging.info(f"User location: Latitude = {latitude}, Longitude = {longitude}")
+    # f = open("./data/location.txt", "a", encoding='utf-8')
+    # f.write(f"Широта: {latitude}; Долгота: {longitude}\n")
+    # f.close()
+
+    # Respond to the frontend
+    return jsonify({"status": "success", "message": message})
 
 if __name__ == "__main__":
     app.run(debug=True)
